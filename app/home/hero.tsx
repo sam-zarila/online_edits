@@ -1,4 +1,5 @@
-
+import Image from "next/image";
+import image1 from '../images/team.jpg'
 
 export default function Hero() {
   return (
@@ -31,16 +32,17 @@ export default function Hero() {
           <div className="absolute -top-16 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-gradient-to-br from-gray-800 to-gray-700 blur-2xl rounded-full"></div>
 
           <div className="relative flex space-x-2 sm:space-x-4">
-            <img
-              src="/path-to-device1.png"
-              alt="Device 1"
-              className="w-28 h-auto sm:w-40 shadow-lg rounded-md border border-gray-700"
+          <Image
+              src={image1}
+              alt=""
+              className="w-60 h-60 sm:w-80 sm:h-80 shadow-lg rounded-md border border-gray-700"
+              style={{
+                maxWidth: "100%",
+                objectFit: "cover",
+              }}
             />
-            <img
-              src="/path-to-device2.png"
-              alt="Device 2"
-              className="w-28 h-auto sm:w-40 shadow-lg rounded-md border border-gray-700"
-            />
+           
+            
           </div>
         </div>
       </div>
